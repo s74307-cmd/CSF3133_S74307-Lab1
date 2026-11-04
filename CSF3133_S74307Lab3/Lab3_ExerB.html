@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+<!-- Error 1 (Line 9): Incorrect h1 and span closing tags -->
+<!-- Error 2 (Line 11): span used instead of div -->
+<!-- Error 3 (Line 14): Incorrect oninput calculation -->
+<!-- Error 4 (Line 18): Missing required attribute -->
+<!-- Error 5 (Line 22): Incorrect list attribute -->
+<!-- Error 6 (Lines 24-25): option tags used instead of datalist options -->
+<!-- Error 7 (Line 32): Incorrect min and max values -->
+<!-- Error 8 (Line 33): Incorrect output for attribute -->
+<!-- Error 9 (Line 38): Incorrect copyright entity -->
+<!-- Error 10 (Line 41): Extra closing tags -->
+
+<div id="header">
+    <h1>Your Campus Cinema</h1>
+</div>
+
+<div id="content">
+    <h2>Book Your Ticket</h2>
+
+    <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+    <form action="booking.php">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your name"
+               required autofocus><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"
+               required><br>
+
+        <!-- New phone number input -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone"
+               placeholder="Enter phone number"
+               required><br>
+
+        <label for="date">Show date:</label>
+        <input type="date" id="date" name="date"><br>
+
+        <!-- New show time input -->
+        <label for="time">Show time:</label>
+        <input type="time" id="time" name="time"><br>
+
+        <label for="movie">Movie:</label>
+        <input type="text" id="movie" name="movie"
+               list="movies"><br>
+
+        <datalist id="movies">
+            <option value="Space Rangers">
+            <option value="Kampung Comedy">
+            <option value="The Lost Kingdom">
+        </datalist>
+
+        <label for="adult">Adult tickets:</label>
+        <input type="number" id="adult" name="adult"
+               value="0" min="0"><br>
+
+        <label for="child">Child tickets:</label>
+        <input type="number" id="child" name="child"
+               value="0" min="0"><br>
+
+        <label for="rating">Rate our service:</label>
+        <input type="range" id="rating" name="rating"
+               min="1" max="5" value="3">
+        <output id="ratingValue">3</output><br>
+
+        Total tickets:
+        <output id="total">0</output><br>
+
+        <!-- New total price output -->
+        Total price (RM):
+        <output id="price">0</output><br>
+
+        <input type="submit" value="Book Now">
+
+    </form>
+</div>
+
+<!-- New sidebar section -->
+<div id="sidebar">
+    <h2>Now Showing</h2>
+
+    <p>
+        <strong>Space Rangers</strong>
+        <span>(PG)</span>
+        <a href="https://www.youtube.com/results?search_query=Space+Rangers+trailer">
+            Trailer
+        </a>
+    </p>
+
+    <p>
+        <strong>Kampung Comedy</strong>
+        <span>(P13)</span>
+        <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer">
+            Trailer
+        </a>
+    </p>
+
+    <p>
+        <strong>Spiderman Brand New Day</strong>
+        <span>(P13)</span>
+        <a href="https://youtu.be/62bIsvRcPv0?si=jPsgoqG2oD2-Qeaa">
+            Trailer
+        </a>
+    </p>
+
+    <a href="movies.html">View Movie Details</a>
+</div>
+
+<div id="footer">
+    <p>&copy; 2026 CineKampus. All rights reserved.</p>
+
+    <!-- New footer text -->
+    <p>e-Ticket&reg; – Campus Cinema &lt; RM10 every Tuesday</p>
+</div>
+
+<!-- JavaScript for ticket calculation -->
+<script>
+    const adult = document.getElementById("adult");
+    const child = document.getElementById("child");
+    const total = document.getElementById("total");
+    const price = document.getElementById("price");
+
+    function calculateTotal() {
+        let adults = Number(adult.value);
+        let children = Number(child.value);
+
+        total.value = adults + children;
+        price.value = (adults * 12) + (children * 8);
+    }
+
+    adult.addEventListener("input", calculateTotal);
+    child.addEventListener("input", calculateTotal);
+
+    const rating = document.getElementById("rating");
+    const ratingValue = document.getElementById("ratingValue");
+
+    rating.addEventListener("input", function() {
+        ratingValue.value = rating.value;
+    });
+</script>
+
+</body>
+</html>
