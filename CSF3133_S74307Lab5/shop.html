@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campus Bookstore</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="shop.css">
+
+    </head>
+
+<!-- Errors fixed:
+1. rel="stylesheeta" should be rel="stylesheet".
+2. Line 10–12: <style> tag is placed inside <body> instead of <head> (and inline/internal CSS overrides external CSS).
+3. Line 18: Inline style style="color:#1B4F72;" overrides external CSS (and is a darker shade instead of standard blue).
+4. Line 20: id="product" does not match the CSS selector #products.
+5. Line 2: 'Robotto' is misspelled; it should be 'Roboto'.
+6. Line 4: no repeat is missing a hyphen; it should be no-repeat.
+7. Line 5: bacground-position is misspelled; it should be background-position.
+-->
+
+<header>
+    <h1>Campus Bookstore</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main id="books">
+
+    <p>Textbooks, stationery and more for every student.</p>
+
+    <table id="products">
+        <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price (RM)</th>
+        </tr>
+
+        <tr>
+            <td>Web Design Basics</td>
+            <td>Textbook</td>
+            <td>45.00</td>
+        </tr>
+
+        <tr>
+            <td>A4 Notebook</td>
+            <td>Stationery</td>
+            <td>6.50</td>
+        </tr>
+
+        <tr>
+            <td>USB Drive 32GB</td>
+            <td>Gadget</td>
+            <td>25.00</td>
+        </tr>
+
+        <tr>
+            <td>Highlighter Set</td>
+            <td>Stationery</td>
+            <td>9.90</td>
+        </tr>
+    </table>
+
+</main>
+
+<footer id="contact">
+    &copy; 2026 Campus Bookstore
+</footer>

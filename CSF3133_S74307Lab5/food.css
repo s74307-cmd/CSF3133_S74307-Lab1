@@ -1,0 +1,172 @@
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #faf6ef;
+    color: #333;
+}
+
+/* 1. Header with Background Image */
+
+  header {
+    background-image: url("header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 115px;
+    min-height: 300px;
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+header h1 {
+    margin: 10px 0 0;
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0 0;
+    font-size: 28px;
+}
+
+header p {
+    font-size: 13px;
+    margin-top: 0;
+}
+
+/* 2. Horizontal Navigation Bar */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+nav a:hover {
+    background-color: #f58220;
+}
+
+nav a.active {
+    background-color: #f58220;
+}
+
+/* 3. Main Content */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+section p {
+    text-align: justify;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* 5. Styled Table */
+#foodTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#foodTable th,
+#foodTable td {
+    border: 1px solid #ddd;
+    padding: 9px 10px;
+    text-align: left;
+}
+
+#foodTable th {
+    background-color: #f58220;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#foodTable tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+#foodTable tbody tr:nth-child(odd) {
+    background-color: #fff0d9;
+}
+
+#foodTable tbody tr:hover {
+    background-color: #ffd18a;
+}
+
+/* Align Price to the Right */
+#foodTable td:last-child {
+    text-align: right;
+}
+
+/* 6. Footer */
+footer {
+    background-color: #eee5d6;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 10px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #foodTable {
+        font-size: 10px;
+    }
+
+    #foodTable th,
+    #foodTable td {
+        padding: 6px;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+}
