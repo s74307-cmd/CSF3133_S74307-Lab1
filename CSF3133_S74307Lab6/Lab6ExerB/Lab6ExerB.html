@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grade Calculator</title>
+    <!-- Link external stylesheet (Instruction 9) -->
+    <link rel="stylesheet" href="grade.css">
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+    
+    <!-- Added 'return' so form validation prevents page reload -->
+    <form name="gradeForm" onsubmit="return checkMark()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        
+        <label for="mark">Mark (0-100):</label>
+        <input type="text" id="mark" name="mark"><br>
+        
+        <button type="submit">Check Grade</button>
+        <!-- Added Random Mark button (Instruction 7) -->
+        <button type="button" onclick="randomMark()">Random Mark</button>
+    </form>
+    
+    <p id="result"></p>
+    <!-- Added paragraph to display date and time checked (Instruction 8) -->
+    <p id="checkedTime"></p>
+    
+    <!-- Fixed function name casing from showtable() to showTable() -->
+    <button onclick="showTable()">Show Grade Table</button>
+    <div id="tableContainer"></div>
+    
+    <!-- Fixed script filename from grades.js to grade.js -->
+    <script src="grade.js"></script>
+</body>
+</html>
